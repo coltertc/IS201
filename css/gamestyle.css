@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  text-align: center;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+/*
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  border: 2px solid white;
+  margin: 0 auto;
+  overflow: hidden;
+}
+*/
+
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  border: 2px solid white;
+  margin: 0 auto;
+  overflow: hidden;
+  background: linear-gradient(black, #001f3f 70%); /* Space */
+  z-index: 1; /* Ensure it is above Earth */
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  border: 2px solid white;
+  margin: 0 auto;
+  overflow: hidden;
+  background: linear-gradient(black, #001f3f 70%); /* Space */
+  z-index: 1; /* Ensure it is above Earth */
+}
+
+.earth-container {
+  position: relative;
+  width: 100%;
+  height: 30vh; /* Adjust for the height of Earth */
+  z-index: 0; /* Put Earth below the game elements */
+}
+
+.earth {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200vw; /* Make it wide enough to cover the bottom */
+  height: 200px; /* Adjust the height of the "sliver" */
+  background: radial-gradient(circle at center, #3c9ae8 30%, #006d77 50%, transparent 70%);
+  transform: translateX(-50%) translateY(50%);
+  border-radius: 50%; /* Makes the sliver curved */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5); /* Adds a soft shadow to Earth */
+}
+
+.earth .land-left {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 12%;
+  height: 10%;
+  background-color: #228B22; /* Smaller landmasses */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.earth .land-right {
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  width: 12%;
+  height: 10%;
+  background-color: #228B22; /* Smaller landmasses */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+
+
+/*
+#spaceship {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+*/
+
+#spaceship {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(gold 50%, darkgoldenrod 55%);
+  border: 3px solid black;
+  clip-path: polygon(
+    50% 0%,   /* Top */
+    90% 38%,  /* Top-right */
+    70% 100%, /* Bottom-right */
+    30% 100%, /* Bottom-left */
+    10% 38%   /* Top-left */
+  );
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px gold, 0 0 20px yellow;
+  background-image: 
+    radial-gradient(circle, gold 60%, black 62%), /* Hexagon cells */
+    linear-gradient(45deg, transparent 49%, gold 49%, gold 51%, transparent 51%);
+  background-size: 20px 20px; /* Honeycomb cell size */
+}
+
+#spaceship:after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 50px;
+  height: 15px;
+  background-color: silver;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 0 0; /* Rounded mirror shape */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+#spaceship:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: gray;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 5px white;
+}
+
+
+
+.laser {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: yellow;
+}
+
+.asteroid {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 50%;
+}
